@@ -4,7 +4,7 @@
   "description": "package name availability checker that checks npm, github and other package repositories",
   "main": "src/server.js",
   "scripts": {
-    "test": "tap",
+    "test": "tap -Rspec",
     "serve": "node src/server.js"
   },
   "repository": "https://github.com/laureanray/ipna",
@@ -13,7 +13,9 @@
   "dependencies": {
     "fastify": "^3.8.0",
     "got": "^11.8.0",
-    "pino-pretty": "^4.3.0"
+    "pino-pretty": "^4.3.0",
+    "should": "^13.2.3",
+    "uuid": "^8.3.1"
   },
   "devDependencies": {
     "tap": "^14.10.8"

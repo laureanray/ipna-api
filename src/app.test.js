@@ -1,18 +1,33 @@
 'use strict'
 
-const { test } = require('tap')
-const build = require('./app')
-
+require('tap').mochaGlobals();
+const build = require('./app');
+const should = require('should')
 
 // /v1/pna
-test('basic query -> v1/ipna', async t => {
-  const app = build()
+describe('/v1/:name Tests', async () => {
+    const app = build()
 
-  const response = await app.inject({
-    method: 'GET',
-    url: '/v1/ipna'
-  });
+    context('when sending a valid request', async () => {
+        it('returns a 200 status code', async () => {
+            const response = await app.inject({
+                method: 'GET',
+                url: '/v1/ipna'
+            });
 
-  t.strictEqual(response.statusCode, 200, 'returns a status code of 200')
+            response.statusCode.should.equal(200);
+        });
+    });
 });
 
+// test('/v1/:name', async t => {
+//     const app = build();
+//
+//     const response = await app.inject({
+//         method: 'GET',
+//         url: '/v1/ipna'
+//     });
+//
+//     t.strictEqual(response.statusCode, 200, '200 status code for valid requests');
+// })
+//
