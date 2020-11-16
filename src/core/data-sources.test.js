@@ -1,8 +1,8 @@
 'use strict';
 
+require('should');
 require('tap').mochaGlobals();
 const { v4: uuidv4 } = require('uuid');
-const should = require('should');
 const {
     searchGithub,
     formatGithubSearchResults
@@ -50,8 +50,7 @@ describe('formatGithubSearchResults', () => {
     });
 
     it('should return an empty array when repository doesn\'t exists', async () => {
-        console.log(await formatGithubSearchResults(uuidv4().toString()));
-        (await formatGithubSearchResults(uuidv4().toString()))
+1        (await formatGithubSearchResults(uuidv4().toString()))
             .should.be.empty()
     });
 });

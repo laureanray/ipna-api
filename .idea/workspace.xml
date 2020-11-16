@@ -23,13 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0377cca5-675e-4680-b08a-65999fc7129e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/core/data-sources.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/github.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/v1/ipna.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/v1/ipna.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/data-sources.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/data-sources.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605497348986</updated>
       <workItem from="1605497351110" duration="6985000" />
+      <workItem from="1605560539152" duration="184000" />
     </task>
     <servers />
   </component>
@@ -77,19 +73,20 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="379" y="243" width="984" height="730" key="SettingsEditor" timestamp="1605503002247">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="379" y="243" width="984" height="730" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1605503002247" />
-    <state x="336" y="237" key="run.anything.popup" timestamp="1605500511141">
+    <state x="336" y="237" key="run.anything.popup" timestamp="1605560702979">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="336" y="237" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1605500511141" />
-    <state x="240" y="220" width="672" height="678" key="search.everywhere.popup" timestamp="1605502978841">
+    <state x="336" y="237" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1605560702979" />
+    <state x="240" y="220" width="672" height="678" key="search.everywhere.popup" timestamp="1605560718984">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="240" y="220" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1605502978841" />
+    <state x="240" y="220" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1605560718984" />
   </component>
 </project>
