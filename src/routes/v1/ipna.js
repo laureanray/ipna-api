@@ -1,4 +1,4 @@
-checkName = async (request, reply) => {
+const checkName = async (request, reply) => {
   return {
     message: 'Hello'
   }
