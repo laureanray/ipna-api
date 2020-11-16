@@ -1,0 +1,18 @@
+{
+  "name": "ipna",
+  "version": "1.0.0",
+  "description": "package name availability checker that checks npm, github and other package repositories",
+  "main": "server.js",
+  "scripts": {
+    "test": "tap"
+  },
+  "repository": "https://github.com/laureanray/ipna",
+  "author": "Laurean Ray Bahala",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^3.8.0"
+  },
+  "devDependencies": {
+    "tap": "^14.10.8"
+  }
+}
