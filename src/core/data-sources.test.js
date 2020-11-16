@@ -17,7 +17,6 @@ describe('searchGithub', () => {
 
     it('should return an error if query is empty', async () => {
         const repositoryResult = await searchGithub('');
-        console.log(repositoryResult);
         repositoryResult.errors.length.should.be.greaterThanOrEqual(1);
     })
 });
