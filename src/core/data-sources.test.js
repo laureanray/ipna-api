@@ -50,7 +50,7 @@ describe('formatGithubSearchResults', () => {
     });
 
     it('should return an empty array when repository doesn\'t exists', async () => {
-1        (await formatGithubSearchResults(uuidv4().toString()))
+        (await formatGithubSearchResults(uuidv4().toString()))
             .should.be.empty()
     });
 });
