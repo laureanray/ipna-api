@@ -8,7 +8,6 @@ const {
     formatGithubSearchResults
 } = require('./data-sources');
 
-
 describe('searchGithub', () => {
     it('should return results for an existing repository (ipna)', async () => {
         const repositoryResult = await searchGithub('ipna');

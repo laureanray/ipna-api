@@ -1,7 +1,9 @@
 'use strict'
 
+require('dotenv').config()
 require('should')
 require('tap').mochaGlobals();
+
 const build = require('./app');
 
 describe('/v1/:name Tests', async () => {
