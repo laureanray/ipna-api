@@ -1,10 +1,10 @@
 # ipna
-IPNA ( _is package name available?_ ) is a tool that checks npm, github and other package repositories to see if a package name is available. 
+IPNA ( _is project name available?_ ) is a tool that checks npm, github and other project repositories to see if a project name is available. 
   
 [![CI Status](https://github.com/laureanray/ipna/workflows/ci/badge.svg?branch=main&event=push)](https://phpunit.de/build-status.html)
 
 ### Features
-   - Saves you time searching if a package name is already used
+   - Saves you time searching if a project name is already used
    - Simple and fast 
     
    
