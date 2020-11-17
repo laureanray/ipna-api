@@ -13,7 +13,6 @@ const searchGithub = async query => {
 }
 
 const formatGithubSearchResults = async (query, maxResults = 3) => {
-  console.log(`query: ${query}`)
   if (!query) return []; // FIXME: We should probably change this to better implementation
 
   const results =  await searchGithub(query);

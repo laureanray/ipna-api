@@ -7,4 +7,5 @@ function build(opts={}) {
   app.register(require('./routes/v1/ipna'), { prefix: '/v1' });
   return app
 }
+
 module.exports = build
