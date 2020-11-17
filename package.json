@@ -5,7 +5,7 @@
   "main": "src/server.js",
   "scripts": {
     "test": "tap -Rspec",
-    "posttest": "tap --coverage-report=text-lcov",
+    "posttest": "tap --coverage-report=lcov src/**/**.test.js --no-browser",
     "serve": "node src/server.js"
   },
   "repository": "https://github.com/laureanray/ipna",
