@@ -5,9 +5,10 @@ const searchGithub = async query => {
       const response = await got(`https://api.github.com/search/repositories?q=${query}`, {
         responseType: 'json'
       });
-      return response.body;
 
+      return response.body;
   } catch (error) {
+      console.log(error.response.body);
       return error.response.body;
   }
 }
