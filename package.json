@@ -18,6 +18,7 @@
     "uuid": "^8.3.1"
   },
   "devDependencies": {
+    "fastify-swagger": "^3.5.0",
     "tap": "^14.10.8"
   }
 }
