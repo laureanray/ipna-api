@@ -17,6 +17,7 @@ jobs:
     strategy:
       matrix:
         node-version: [10.x, 12.x, 14.x]
+  steps:
 
     steps:
     - uses: actions/checkout@v2
@@ -26,7 +27,12 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: yarn install 
     - run: yarn test
-      env:
-        CODECOV_TOKEN: b30292bc-72aa-4efa-9ae5-2c1a902af815
-    - run:  bash <(curl -s https://codecov.io/bash)
+    - uses: actions/checkout@master
+    - uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+        flags: unittests # optional
+        name: codecov-umbrella # optional
+        fail_ci_if_error: true # optional (default = false)
+        verbose: true # optional (default = false)
 
