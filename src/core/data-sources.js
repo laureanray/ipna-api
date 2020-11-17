@@ -17,7 +17,7 @@ const formatGithubSearchResults = async (query, maxResults = 3) => {
 
   const results =  await searchGithub(query);
   const topGithubResults = [];
-
+  /* istanbul ignore else */
   if (results.items) {
     for (let i = 0; i < results.items.length && i < maxResults; i++) {
       topGithubResults.push({

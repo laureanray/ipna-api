@@ -26,3 +26,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: yarn install 
     - run: yarn test
+      env:
+        CODECOV_TOKEN: b30292bc-72aa-4efa-9ae5-2c1a902af815
