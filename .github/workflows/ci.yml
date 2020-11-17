@@ -25,6 +25,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: yarn install 
     - run: yarn test
+    - run: yarn posttest
     - uses: actions/checkout@master
     - uses: codecov/codecov-action@v1
       with:
