@@ -1,8 +1,8 @@
 'use strict'
 
+require('should')
 require('tap').mochaGlobals();
 const build = require('./app');
-const should = require('should')
 
 describe('/v1/:name Tests', async () => {
     const app = build()
