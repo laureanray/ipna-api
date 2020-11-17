@@ -12,7 +12,7 @@ describe('/v1/:name Tests', async () => {
         it('returns a 200 status code', async () => {
             const response = await app.inject({
                 method: 'GET',
-                url: '/v1/ipna'
+                url: '/x1/ipna'
             });
 
             response.statusCode.should.equal(200);
