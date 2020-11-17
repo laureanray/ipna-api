@@ -23,8 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0377cca5-675e-4680-b08a-65999fc7129e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +63,7 @@
       <workItem from="1605497351110" duration="6985000" />
       <workItem from="1605560539152" duration="5606000" />
       <workItem from="1605568401303" duration="71000" />
-      <workItem from="1605568500105" duration="4896000" />
+      <workItem from="1605568500105" duration="4960000" />
     </task>
     <servers />
   </component>
@@ -92,10 +91,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="375" y="147" width="976" height="730" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1605568424397" />
-    <state x="336" y="237" key="run.anything.popup" timestamp="1605560702979">
+    <state x="336" y="237" key="run.anything.popup" timestamp="1605579096005">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="336" y="237" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1605560702979" />
+    <state x="336" y="237" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1605579096005" />
     <state x="240" y="220" width="672" height="678" key="search.everywhere.popup" timestamp="1605579062633">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
