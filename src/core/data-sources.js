@@ -1,14 +1,10 @@
-const got = require('got');
+const { githubAPI } = require('./http-clients');
 
 const searchGithub = async query => {
   try {
-      const response = await got(`https://api.github.com/search/repositories?q=${query}`, {
-        responseType: 'json'
-      });
-
+      const response = await githubAPI(`repositories?=${query}`);
       return response.body;
   } catch (error) {
-      console.log(error.response.body);
       return error.response.body;
   }
 }
