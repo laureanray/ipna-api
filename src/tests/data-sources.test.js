@@ -16,7 +16,7 @@ describe('searchGithub', () => {
 
     it('should return an error if query is empty', async () => {
         const repositoryResult = await searchGithub('');
-        repositoryResult.errors.length.should.be.greaterThanOrEqual(1);
+        repositoryResult.message.should.equal('Validation Failed');
     })
 });
 

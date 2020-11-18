@@ -1,5 +1,4 @@
 const {
-    searchGithub,
     formatGithubSearchResults
 } = require("../../core/data-sources");
 

@@ -5,6 +5,7 @@
   "main": "src/server.js",
   "scripts": {
     "test": "tap -Rspec",
+    "testwatch":  "tap -Rspec -w",
     "posttest": "tap --coverage-report=json src/tests/**.test.js --no-browser",
     "serve": "node src/server.js"
   },
