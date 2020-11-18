@@ -20,7 +20,7 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       env:
-        PAT_1: ${{ secrets.PAT_1} }}
+        PAT_1: ${{ secrets.PAT_1 }}
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn install
