@@ -6,7 +6,7 @@ const { v4: uuidv4 } = require('uuid');
 const {
     searchGithub,
     formatGithubSearchResults
-} = require('./data-sources');
+} = require('../core/data-sources');
 
 describe('searchGithub', () => {
     it('should return results for an existing repository (ipna)', async () => {
@@ -16,7 +16,7 @@ describe('searchGithub', () => {
 
     it('should return an error if query is empty', async () => {
         const repositoryResult = await searchGithub('');
-        repositoryResult.errors.length.should.be.greaterThanOrEqual(1);
+        repositoryResult.errors.legngth.should.be.greaterThanOrEqual(1);
     })
 });
 
