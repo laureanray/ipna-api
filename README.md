@@ -11,7 +11,7 @@ IPNA ( _is project name available?_ ) is a tool that checks npm, github and othe
     
    
 ### Clients
-   [ipna-cli](https://github.com/laureanray/ipna) - command line client
+   [ipna](https://github.com/laureanray/ipna) - command line client
 
 ### Contributing
    _Soon_
