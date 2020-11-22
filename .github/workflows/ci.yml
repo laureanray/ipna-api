@@ -17,6 +17,7 @@ jobs:
       matrix:
         node-version: [ 12.x ]
     steps:
+      - uses: actions/checkout@master
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -27,8 +28,7 @@ jobs:
       - name: Generate coverage reprot
       - run: yarn test
       - run: yarn posttest
-      - uses: actions/checkout@master
-      - uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
           file: ./coverage-final.json # optional
