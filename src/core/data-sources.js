@@ -1,19 +1,19 @@
-const { githubAPI } = require('./http-clients');
+const { githubAPI } = require('./http-clients')
 
 const searchGithub = async query => {
   try {
-      const response = await githubAPI(`search/repositories?q=${query}`);
-      return response.body;
+    const response = await githubAPI(`search/repositories?q=${query}`)
+    return response.body
   } catch (error) {
-      return error.response.body;
+    return error.response.body
   }
 }
 
 const formatGithubSearchResults = async (query, maxResults = 3) => {
-  if (!query) return []; // FIXME: We should probably change this to better implementation
+  if (!query) return [] // FIXME: We should probably change this to better implementation
 
-  const results =  await searchGithub(query);
-  const topGithubResults = [];
+  const results = await searchGithub(query)
+  const topGithubResults = []
   /* istanbul ignore else */
   if (results.items) {
     for (let i = 0; i < results.items.length && i < maxResults; i++) {
@@ -23,12 +23,11 @@ const formatGithubSearchResults = async (query, maxResults = 3) => {
         full_name: results.items[i].full_name,
         forks: results.items[i].forks,
         stargazers_count: results.items[i].stargazers_count
-      });
+      })
     }
   }
-  return topGithubResults;
+  return topGithubResults
 }
-
 
 module.exports = {
   formatGithubSearchResults,

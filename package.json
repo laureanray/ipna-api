@@ -4,10 +4,11 @@
   "description": "package name availability checker that checks npm, github and other package repositories",
   "main": "src/server.js",
   "scripts": {
-    "test": "tap -Rspec",
+    "test": "yarn std && tap -Rspec",
     "testwatch": "tap -Rspec -w",
     "posttest": "tap --coverage-report=json src/tests/**.test.js --no-browser",
-    "serve": "node src/server.js"
+    "serve": "node src/server.js",
+    "std": "standard --env mocha"
   },
   "repository": "https://github.com/laureanray/ipna",
   "author": "Laurean Ray Bahala",

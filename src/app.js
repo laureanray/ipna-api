@@ -2,9 +2,9 @@
 
 const fastify = require('fastify')
 
-function build(opts={}) {
+function build (opts = {}) {
   const app = fastify(opts)
-  app.register(require('./routes/v1/ipna'), { prefix: '/v1' });
+  app.register(require('./routes/v1/ipna'), { prefix: '/v1' })
   return app
 }
 
