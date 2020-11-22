@@ -17,20 +17,23 @@ jobs:
       matrix:
         node-version: [ 12.x ]
     steps:
-      - uses: actions/checkout@master
-      - uses: codecov/codecov-action@v1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
-          file: ./coverage/coverage-final.json.xml # optional
-          fail_ci_if_error: true 
-          verbose: true
-      - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
       - run: yarn install
-      - run: yarn test
-      - run: yarn posttest
         env:
           PAT_1: ${{ secrets.PAT_1 }}
+      - name: Generate coverage reprot
+      - run: yarn test
+      - run: yarn posttest
+      - uses: actions/checkout@master
+      - uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          file: ./coverage-final.json # optional
+          directory: ./coverage
+          fail_ci_if_error: true 
+          verbose: true
+
+        
