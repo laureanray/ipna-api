@@ -22,11 +22,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-        env:
-          PAT_1: ${{ secrets.PAT_1 }}
       - run: yarn install
       - run: yarn test
       - run: yarn posttest
+        env:
+          PAT_1: ${{ secrets.PAT_1 }}
       # - name: Upload code coverage to codecov
       #   uses: codecov/codecov-action@v1
       #   with:
