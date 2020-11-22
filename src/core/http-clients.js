@@ -1,8 +1,6 @@
 require('dotenv').config()
 const got = require('got')
 
-console.log(process.env.PAT_1)
-
 const githubAPI = got.extend({
   prefixUrl: 'https://api.github.com/',
   headers: {
