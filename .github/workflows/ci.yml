@@ -3,6 +3,8 @@
 
 name: ci
 
+name: ci
+
 on:
   push:
     branches: [ main ]
@@ -17,16 +19,13 @@ jobs:
       matrix:
         node-version: [ 12.x ]
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
       - run: yarn install
-      - name: Generate coverage reprot
-      - run: |
-          yarn test
-          yarn posttest
+      - run: yarn test
         env:
           PAT_1: ${{ secrets.PAT_1 }}
       # - name: Upload code coverage to codecov
