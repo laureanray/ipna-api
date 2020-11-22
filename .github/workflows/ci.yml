@@ -29,13 +29,13 @@ jobs:
       - run: |
           yarn test
           yarn posttest
-      - name: Upload code coverage to codecov
-        uses: codecov/codecov-action@v1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
-          file: ./coverage-final.json # optional
-          directory: ./coverage
-          fail_ci_if_error: true 
-          verbose: true
+      # - name: Upload code coverage to codecov
+        # uses: codecov/codecov-action@v1
+        # with:
+        #   token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+        #   file: ./coverage-final.json # optional
+        #   directory: ./coverage
+        #   fail_ci_if_error: true 
+        #   verbose: true
 
         
