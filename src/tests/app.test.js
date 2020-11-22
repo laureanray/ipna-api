@@ -1,6 +1,5 @@
 'use strict'
 
-require('dotenv').config()
 require('should')
 require('tap').mochaGlobals()
 
