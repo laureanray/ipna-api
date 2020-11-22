@@ -18,4 +18,4 @@ const npmAPI = got.extend({
   responseType: 'json'
 })
 
-module.exports = { githubAPI }
+module.exports = { githubAPI, npmAPI }

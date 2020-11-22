@@ -8,7 +8,7 @@
     "testwatch": "tap -Rspec -w",
     "posttest": "tap --coverage-report=json src/tests/**.test.js --no-browser",
     "serve": "node src/server.js",
-    "std": "standard --env mocha"
+    "std": "standard --fix --env mocha"
   },
   "repository": "https://github.com/laureanray/ipna",
   "author": "Laurean Ray Bahala",
