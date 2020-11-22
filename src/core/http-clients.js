@@ -10,4 +10,12 @@ const githubAPI = got.extend({
   responseType: 'json'
 })
 
+const npmAPI = got.extend({
+  prefixUrl: 'https://api.npms.io/v2/',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  responseType: 'json'
+})
+
 module.exports = { githubAPI }
