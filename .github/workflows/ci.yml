@@ -24,15 +24,14 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: yarn install
       - run: yarn test
+      - run: yarn posttest
         env:
           PAT_1: ${{ secrets.PAT_1 }}
-
-      steps:
-        - uses: actions/checkout@master
-        - uses: codecov/codecov-action@v1
-          with:
-            token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
-            file: ./coverage/coverage-final.json.xml # optional
-            name: codecov-umbrella # optional
-            fail_ci_if_error: true # optional (default = false)
-            verbose: true # optional (default = false)
+    steps:
+      - uses: actions/checkout@master
+      - uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          file: ./coverage/coverage-final.json.xml # optional
+          fail_ci_if_error: true 
+          verbose: true
