@@ -6,7 +6,7 @@
   "scripts": {
     "test": "yarn std && tap -Rspec",
     "testwatch": "tap -Rspec -w",
-    "posttest": "tap --coverage-report=json src/tests/**.test.js --no-browser",
+    "posttest": "tap --coverage-report=text-lcov | codecov",
     "serve": "node src/server.js",
     "std": "standard --fix --env mocha"
   },
