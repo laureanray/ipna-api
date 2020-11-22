@@ -26,8 +26,9 @@ jobs:
         env:
           PAT_1: ${{ secrets.PAT_1 }}
       - name: Generate coverage reprot
-      - run: yarn test
-      - run: yarn posttest
+      - run: |
+          yarn test
+          yarn posttest
       - name: Upload code coverage to codecov
         uses: codecov/codecov-action@v1
         with:
