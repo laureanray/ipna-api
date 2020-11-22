@@ -27,7 +27,6 @@ jobs:
       - run: yarn posttest
         env:
           PAT_1: ${{ secrets.PAT_1 }}
-    steps:
       - uses: actions/checkout@master
       - uses: codecov/codecov-action@v1
         with:
