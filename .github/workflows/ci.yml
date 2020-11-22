@@ -28,6 +28,7 @@ jobs:
       - name: Generate coverage reprot
       - run: yarn test
       - run: yarn posttest
+      - name: Upload code coverage to codecov
         uses: codecov/codecov-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
