@@ -24,7 +24,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: yarn install
       - run: yarn test
-      - run: yarn posttest
+#      - run: yarn posttest
         env:
           PAT_1: ${{ secrets.PAT_1 }}
       # - name: Upload code coverage to codecov
@@ -38,4 +38,3 @@ jobs:
       #   env:
       #     PAT_1: ${{ secrets.PAT_1 }}
 
-        
