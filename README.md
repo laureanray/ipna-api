@@ -10,7 +10,8 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
    
 </div>  
-IPNA _is project name available_ is a tool that checks npm, github and other project repositories to see if a project name has already been used.  
+
+IPNA (is project name available) is a tool that checks npm, github and other project repositories to see if a project name has already been used.  
 
 
 ### Features
