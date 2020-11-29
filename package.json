@@ -7,7 +7,7 @@
     "test": "yarn std && tap -Rspec",
     "testwatch": "tap -Rspec -w",
     "posttest": "yarn std",
-    "serve": "node src/server.js",
+    "start": "node src/server.js",
     "std": "standard --fix --env mocha"
   },
   "repository": "https://github.com/laureanray/ipna",
