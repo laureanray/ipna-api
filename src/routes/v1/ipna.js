@@ -14,6 +14,11 @@ const checkName = async request => {
 
 module.exports = function (fastify, opts, done) {
   fastify.get('/:name', checkName)
+  fastify.get('/test', () => {
+    return {
+      message: 'Test route'
+    }
+  })
   // TODO: Add custom fields here
   done()
 }
