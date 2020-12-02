@@ -4,11 +4,12 @@ const {
 
 const checkName = async request => {
   // TODO: Add other sources / package repo
+  const githubResults = await formatGithubSearchResults(request.params.name);
   return {
-    is_taken: true,
-    github_results: await formatGithubSearchResults(request.params.name),
-    gitlab_results: [],
-    npm_results: []
+    isTaken: githubResults.length > 0,
+    githubResults,
+    gitlabResults: [],
+    npmResults: []
   }
 }
 
