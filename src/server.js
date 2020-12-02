@@ -7,7 +7,7 @@ const server = require('./app')({
   }
 })
 
-server.listen(process.env.PORT, (err) => {
+server.listen(process.env.PORT, '0.0.0.0', (err) => {
   if (err) {
     console.log(err)
     process.exit(1)
