@@ -1,8 +1,17 @@
-const { githubAPI } = require('./http-clients')
+const { githubAPI, npmAPI } = require('./http-clients')
 
 const searchGithub = async query => {
   try {
     const response = await githubAPI(`search/repositories?q=${query}`)
+    return response.body
+  } catch (error) {
+    return error.response.body
+  }
+}
+
+const searchNPM = async query => {
+  try {
+    const response = await npmAPI(`search?q=${query}`)
     return response.body
   } catch (error) {
     return error.response.body
@@ -29,7 +38,22 @@ const formatGithubSearchResults = async (query, maxResults = 3) => {
   return topGithubResults
 }
 
+const formatNPMSearchResults = async (query, maxResults = 3) => {
+  if (!query) return []
+
+  const results = await searchNPM(query)
+  // const topNPMResults = []
+
+  if (results) {
+    console.log(results)
+  }
+
+  return results
+}
+
 module.exports = {
   formatGithubSearchResults,
-  searchGithub
+  formatNPMSearchResults,
+  searchGithub,
+  searchNPM
 }

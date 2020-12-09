@@ -5,7 +5,9 @@ require('tap').mochaGlobals()
 const { v4: uuidv4 } = require('uuid')
 const {
   searchGithub,
-  formatGithubSearchResults
+  searchNPM,
+  formatGithubSearchResults,
+  formatNPMSearchResults
 } = require('../core/data-sources')
 
 describe('searchGithub', () => {
@@ -17,6 +19,25 @@ describe('searchGithub', () => {
   it('should return an error if query is empty', async () => {
     const repositoryResult = await searchGithub('')
     repositoryResult.message.should.equal('Validation Failed')
+  })
+})
+
+describe('searchNPM', () => {
+  it('should return results for an existing npm package (react)', async () => {
+    const npmResult = await searchNPM('react')
+    npmResult.should.not.be.null()
+  })
+
+  // it('should return an error if query is empty', async () => {
+  //   const npmResult = await searchNPM('')
+  //   const s.l
+  // })
+})
+
+describe('formatNPMSearchResults', function () {
+  it('should return empty array when querying blank/empty string', async () => {
+    (await formatNPMSearchResults(''))
+      .should.be.empty()
   })
 })
 

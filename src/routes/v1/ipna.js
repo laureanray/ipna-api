@@ -1,15 +1,16 @@
 const {
-  formatGithubSearchResults
+  formatGithubSearchResults,
+  formatNPMSearchResults
 } = require('../../core/data-sources')
 
 const checkName = async request => {
   // TODO: Add other sources / package repo
-  const githubResults = await formatGithubSearchResults(request.params.name);
+  const githubResults = await formatGithubSearchResults(request.params.name)
+  const npmResults = await formatNPMSearchResults(request.params.name)
   return {
-    isTaken: githubResults.length > 0,
+    isTaken: githubResults.length > 0 || npmResults.total > 0,
     githubResults,
-    gitlabResults: [],
-    npmResults: []
+    npmResults
   }
 }
 
