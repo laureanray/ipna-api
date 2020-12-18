@@ -34,10 +34,16 @@ describe('searchNPM', () => {
   // })
 })
 
-describe('formatNPMSearchResults', function () {
+describe('formatNPMSearchResults', () => {
   it('should return empty array when querying blank/empty string', async () => {
     (await formatNPMSearchResults(''))
       .should.be.empty()
+  })
+
+  it('should return only specific max results', async () => {
+    const result = await formatNPMSearchResults('react', 3)
+    result.length.should.not.be.greaterThan(3)
+    console.log(result.length)
   })
 })
 

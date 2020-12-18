@@ -10,12 +10,9 @@ const searchGithub = async query => {
 }
 
 const searchNPM = async query => {
-  try {
-    const response = await npmAPI(`search?q=${query}`)
-    return response.body
-  } catch (error) {
-    return error.response.body
-  }
+  // This doesn't throw an error, no use of try-catching
+  const response = await npmAPI(`search?q=${query}`)
+  return response.body
 }
 
 const formatGithubSearchResults = async (query, maxResults = 3) => {
@@ -42,13 +39,18 @@ const formatNPMSearchResults = async (query, maxResults = 3) => {
   if (!query) return []
 
   const results = await searchNPM(query)
-  // const topNPMResults = []
 
-  if (results) {
-    console.log(results)
+  let topNPMResults = []
+
+  if (results && maxResults < results.results.length) {
+    for (let i = 0; i < maxResults; i++) {
+      topNPMResults.push(results.results[i])
+    }
+  } else {
+    topNPMResults = results.results
   }
 
-  return results
+  return topNPMResults
 }
 
 module.exports = {
