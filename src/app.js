@@ -7,7 +7,7 @@ function build (opts = {}) {
   const app = fastify(opts)
 
   app.register(require('fastify-rate-limit'), {
-    max: 25,
+    max: 10,
     timeWindow: '1 minute'
   })
 
