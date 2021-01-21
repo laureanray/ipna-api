@@ -6,10 +6,7 @@ const packageJson = require('../package.json')
 function build (opts = {}) {
   const app = fastify(opts)
 
-  app.register(require('fastify-rate-limit'), {
-    max: 10,
-    timeWindow: '1 minute'
-  })
+  app.register(require('fastify-rate-limit'), {})
 
   app.register(require('fastify-swagger'), {
     routePrefix: '/',

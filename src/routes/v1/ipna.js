@@ -16,6 +16,12 @@ const checkName = async request => {
 
 module.exports = function (fastify, opts, done) {
   fastify.get('/:name', {
+    config: {
+      rateLimit: {
+        max: 10,
+        timeWindow: '1 minute'
+      }
+    },
     schema: {
       description: 'search query',
       tags: ['v1'],
