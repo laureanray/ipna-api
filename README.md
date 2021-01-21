@@ -8,7 +8,7 @@
 [![CI Status](https://github.com/laureanray/ipna-api/workflows/ci/badge.svg?branch=main&event=push)](https://github.com/laureanray/ipna-api/actions?query=workflow%3Aci)
 [![codecov](https://codecov.io/gh/laureanray/ipna-api/branch/main/graph/badge.svg)](https://codecov.io/gh/laureanray/ipna-api)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![GitHub package.json version](https://img.shields.io/github/package-json/v/laureanray/ipna-api?style=plastic)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/laureanray/ipna-api)
 </div>  
 
 IPNA (is project name available) is a tool that checks npm, github and other project repositories to see if a project name has already been used.  
