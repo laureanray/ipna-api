@@ -15,7 +15,44 @@ const checkName = async request => {
 }
 
 module.exports = function (fastify, opts, done) {
-  fastify.get('/:name', checkName)
+  fastify.get('/:name', {
+    config: {
+      rateLimit: {
+        max: 10,
+        timeWindow: '1 minute'
+      }
+    },
+    schema: {
+      description: 'search query',
+      tags: ['v1'],
+      summary: 'v1 main endpoint',
+      params: {
+        type: 'object',
+        properties: {
+          name: {
+            type: 'string',
+            description: 'search query'
+          }
+        }
+      },
+      response: {
+        200: {
+          description: 'Successful response',
+          type: 'object',
+          properties: {
+            isTaken: { type: 'boolean' },
+            githubResults: { type: 'array' },
+            npmResults: { type: 'array' }
+          }
+        }
+      },
+      security: [
+        {
+          apiKey: []
+        }
+      ]
+    }
+  }, checkName)
   fastify.get('/test', () => {
     return {
       message: 'Test route'

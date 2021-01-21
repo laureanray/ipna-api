@@ -14,7 +14,7 @@ describe('/ Tests', async () => {
       for (let i = 0; i < 15; i++) {
         response = await app.inject({
           method: 'GET',
-          url: '/v1/test'
+          url: '/v1/laureanray'
         })
       }
       response.statusCode.should.equal(429)
@@ -25,7 +25,7 @@ describe('/ Tests', async () => {
     it('returns a 404 status code', async () => {
       const response = await app.inject({
         method: 'GET',
-        url: '/test'
+        url: '/nonexistent'
       })
 
       response.statusCode.should.equal(404)
