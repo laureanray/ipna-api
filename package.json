@@ -1,6 +1,6 @@
 {
   "name": "ipna",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "package name availability checker that checks npm, github and other package repositories",
   "main": "src/server.js",
   "scripts": {
