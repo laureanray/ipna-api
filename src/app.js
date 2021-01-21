@@ -7,7 +7,7 @@ function build (opts = {}) {
   const app = fastify(opts)
 
   app.register(require('fastify-rate-limit'), {
-    max: 10,
+    max: 25,
     timeWindow: '1 minute'
   })
 
@@ -35,6 +35,11 @@ function build (opts = {}) {
   })
 
   app.register(require('./routes/v1/ipna'), { prefix: '/v1' })
+
+  app.ready(err => {
+    if (err) throw err
+    app.swagger()
+  })
   return app
 }
 

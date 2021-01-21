@@ -32,7 +32,12 @@ module.exports = function (fastify, opts, done) {
       response: {
         200: {
           description: 'Successful response',
-          type: 'object'
+          type: 'object',
+          properties: {
+            isTaken: { type: 'boolean' },
+            githubResults: { type: 'array' },
+            npmResults: { type: 'array' }
+          }
         }
       },
       security: [
