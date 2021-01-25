@@ -2,11 +2,17 @@
 
 const fastify = require('fastify')
 const packageJson = require('../package.json')
+const path = require('path')
 
 function build (opts = {}) {
   const app = fastify(opts)
 
   app.register(require('fastify-rate-limit'), {})
+
+  app.register(require('fastify-static'), {
+    root: path.join(__dirname, 'public'),
+    list: false
+  })
 
   app.register(require('fastify-swagger'), {
     routePrefix: '/docs',
