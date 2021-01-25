@@ -1,6 +1,6 @@
 # ipna-api
 <div align="center">  
-   <img src="https://raw.githubusercontent.com/laureanray/ipna-api/main/graphics/ipna-500px-square.png" width="500" height="auto"/>
+   <img src="https://raw.githubusercontent.com/laureanray/ipna-api/main/graphics/ipna.png" width="500" height="auto"/>
 </div>  
 
 <div align="center">  
