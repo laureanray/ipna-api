@@ -17,10 +17,11 @@
     "dotenv": "^8.2.0",
     "fastify": "^3.8.0",
     "fastify-rate-limit": "^4.0.3",
+    "fastify-static": "^3.4.0",
+    "fastify-swagger": "^3.5.0",
     "got": "^11.8.0",
     "pino-pretty": "^4.3.0",
     "should": "^13.2.3",
-    "fastify-swagger": "^3.5.0",
     "uuid": "^8.3.1"
   },
   "devDependencies": {
