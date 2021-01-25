@@ -7,9 +7,9 @@
     "test": "yarn std && tap -Rspec",
     "testwatch": "tap -Rspec -w",
     "posttest": "yarn std",
-    "start": "node src/server.js",
+    "start": "yarn css && node src/server.js",
     "std": "standard --fix --env mocha",
-    "css": "npx tailwindcss-cli@latest build ./src/tailwind.css -o ./src/public/tailwind.css\n"
+    "css": "npx tailwindcss-cli@latest build ./src/style/tailwind.css -o ./src/public/tailwind.css\n"
   },
   "repository": "https://github.com/laureanray/ipna",
   "author": "Laurean Ray Bahala",
