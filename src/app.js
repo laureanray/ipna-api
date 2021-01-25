@@ -9,7 +9,7 @@ function build (opts = {}) {
   app.register(require('fastify-rate-limit'), {})
 
   app.register(require('fastify-swagger'), {
-    routePrefix: '/',
+    routePrefix: '/docs',
     swagger: {
       info: {
         title: packageJson.name,
